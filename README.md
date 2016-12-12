@@ -1,2 +1,14 @@
-# softEngFinalProject
-This is the github repo for Jetlir Lajqi and Besart Aliju's final project for Jie Wei's Software Engineering Class at CCNY.
+# Social Business for Jie Wei's Software Engineering Class
+
+
+## Authors: Jetlir Lajqi and Besart Aliju
+
+
+### Tools used: 
+    1) Django 1.10
+    2) Python 3.5
+    3) VirtualEnv
+    4) Requests
+    
+ **Fall 2016**
+  
