@@ -3,7 +3,9 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import authenticate, login
 from django.views.generic import View
 from .forms import UserForm
-from django.views import generic
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from business.models import Post
 
 # Create your views here.
 class UserFormView(View):
@@ -37,18 +39,13 @@ class UserFormView(View):
                     return redirect('business:index')
         return render(request, self.template_name, {'form': form})
 
-def IndexView(ListView):
+class IndexView(ListView):
     template_name = 'business/index.html'
     context_object_name = 'all_posts'
 
     def get_queryset(self):
         return Post.objects.all()
 
-def DetailView(DetailView):
+class DetailView(DetailView):
     model = Post
     template_name = 'business/detail.html'
-
-def update_profile(request, user_id):
-    user = User.objects.get(pk=user_id)
-    user.profile.bio = 'Lorem ipsum dolor....'
-    user.save()

@@ -1,0 +1,10 @@
+{% extends 'business/base.html' %}
+
+{% block body %}
+  <ul>
+    {% for post in all_posts %}
+    <li><a href= "{% url 'business:detail' %}"> {{ post.title}} </a></li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

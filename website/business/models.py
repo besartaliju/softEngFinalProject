@@ -25,7 +25,7 @@ def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 """
 
-class Post (models.Model):
+class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     title = models.CharField(max_length=200)
@@ -33,7 +33,7 @@ class Post (models.Model):
     def __str__(self):
         return self.text
 
-class Comment (models.Model):
+class Comment(models.Model):
     text = models.TextField()
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
