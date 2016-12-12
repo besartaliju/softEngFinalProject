@@ -11,6 +11,7 @@ class Profile(models.Model):
     bio = models.TextField(max_length=500, blank=True)
     location = models.CharField(max_length=30, blank=True)
     accountBalance = models.DecimalField(max_digits=9, decimal_places=2)
+    isVIP = models.BooleanField(default=False)
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):

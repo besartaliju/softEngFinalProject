@@ -19,5 +19,6 @@ from business import views as business_views
 
 urlpatterns = [
     url(r'^$', business_views.index),
+    url(r'^register/$', business_views.UserForm.as_view(), name='register')
     url(r'^admin/', admin.site.urls),
 ]
