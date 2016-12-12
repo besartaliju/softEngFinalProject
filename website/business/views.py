@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import authenticate, login
 from django.views.generic import View
 from .forms import UserForm
+from django.views import generic
 
 # Create your views here.
 class UserFormView(View):
@@ -33,14 +35,18 @@ class UserFormView(View):
                 if user.is_active:
                     login(request, user)
                     return redirect('business:index')
-
-
         return render(request, self.template_name, {'form': form})
 
+def IndexView(ListView):
+    template_name = 'business/index.html'
+    context_object_name = 'all_posts'
 
+    def get_queryset(self):
+        return Post.objects.all()
 
-def index(request):
-    return render(request, 'index.html')
+def DetailView(DetailView):
+    model = Post
+    template_name = 'business/detail.html'
 
 def update_profile(request, user_id):
     user = User.objects.get(pk=user_id)

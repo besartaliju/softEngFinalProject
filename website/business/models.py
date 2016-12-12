@@ -5,7 +5,9 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 
-# Create your models here.
+# Create your models here:
+
+"""
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, blank=True)
@@ -21,15 +23,12 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
-
-
+"""
 
 class Post (models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     title = models.CharField(max_length=200)
-
-
 
     def __str__(self):
         return self.text
