@@ -22,7 +22,7 @@
 
  Working on this project was challenging, yet rewarding. It reinforced my love of coding and often times while working on this project, I remembered why I enjoyed coding so much in the first place. Learning new technologies and trying to pick them up as fast as possible to incorporate them is very exciting to me. Ideally, in this application, I would have liked to have incorporated some sort of machine learning algorithms in this application such as recommending items based upon linear classifiers or through the use of support vector machines.
 
-#### Jetlir Lajqi
+## Jetlir Lajqi
 
  Similar to what Besart said, working on this project was tough but rewarding. Often times when I am looking for things to code, I end up reading a lot about the tools to use for projects depending on what kind of project I would like to do, but I end up spending no time actually working on a project. Before I know it, the school semester is here again and I will have little time to work on an impactful project. For this assignment, it made building a project fun because there is an end goal in mind given by someone else. Of course, after this course is over, I can go back and modify it; having the end goal in mind makes building the project easier. I am more of a visual person, so I would have liked to have had a material design GUI. Often times, lazy designers just use a bootstrap template, but I wanted to design something from the ground up.
 
