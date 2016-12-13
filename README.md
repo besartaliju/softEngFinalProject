@@ -5,10 +5,13 @@
 
 
 #### Tools used:
-    1) Django 1.10
-    2) Python 3.5
+    1) Django 1.10.4
+    2) Python 3.5.2
     3) VirtualEnv
     4) Requests
+    5) Bootstrap
+    6) JQuery
+    7) SQLite3
 
 
 ## Lessons Learned
