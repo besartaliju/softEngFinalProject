@@ -10,6 +10,7 @@
     3) VirtualEnv
     4) Requests
 
+
  ## Lessons Learned
 
  :tada:  
@@ -25,6 +26,7 @@
 
 
  ## Some Failures
+
  Connecting our front-end to the database proved to be somewhat of a challenge. __Django__ has it's own Template Language which allows for the use of writing dynamic HTML, however, connecting that to the back-end was difficult. As a result, sometimes our website seems to function depending on certain parameters and some other times, not so much.
 
  Looking back at it now, we might have considered not using Django, and preferring to use a more basic platform such as Python coupled with Tk or with Qt. Unfortunately, Django had just released a new version of their framework, 1.10, so as a result, there was official documentation, but we felt as though there was a lack of user support on forums such as StackOverflow.
