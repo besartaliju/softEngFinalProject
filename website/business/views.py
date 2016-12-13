@@ -1,18 +1,19 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import authenticate, login
+from django.contrib.auth import logout
 from django.views.generic import View
 from .forms import UserForm
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from business.models import Post
+from business.models import Post, Comments, Profile
 
 # Create your views here.
 class UserFormView(View):
     form_class = UserForm
     template_name = 'business/registration_form.html'
 
-    #display blank form
+    #Display blank form
     def get(self, request):
         form = self.form_class(None)
         return render(request, self.template_name, {'form': form})
@@ -39,6 +40,7 @@ class UserFormView(View):
                     return redirect('business:index')
         return render(request, self.template_name, {'form': form})
 
+
 class IndexView(ListView):
     template_name = 'business/index.html'
     context_object_name = 'all_posts'
@@ -49,3 +51,10 @@ class IndexView(ListView):
 class DetailView(DetailView):
     model = Post
     template_name = 'business/detail.html'
+
+
+def logout_user(request):
+    logout(request)
+    form = UserForm(request.POST or None)
+    context = {'form': form}
+    return render(request,'business/login.html'), context)
